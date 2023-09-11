@@ -1,0 +1,50 @@
+contents:-
+Promise
+ - What is a promise?
+ - Promise States
+ - Promise chain
+ - promise.all()
+ -then()
+---------------------------------------------------------------
+callback-Hell:-
+function a1(){
+    function a2(){
+        function a3(){
+            console.log("hello")
+        }
+    }
+}
+
+Promise:- 
+=> It holds the result of async operation.
+Need of Promise:- 
+=> To overcome callback hell sceneario.
+=> It is an object ,which holds the result of async operation.
+
+syntax:- var/let/const variablename = new Promise((resolve,reject)=>{})
+
+For every promise object we have 3 states:- 
+1. Pending
+2. Fullfilled (resolve)
+3. Rejected.
+
+session Task:-
+18 > eligible to vote; 18< not eligible to vote
+
+Promise chain:-
+=> chaining of promise.
+=> Dependent operation.
+=> the result of first promise is the input of second promise.
+
+Promise.all()
+=> when you have multiple promises
+=> It will wait for all the promise are getting resolved
+=> it returns an array of values
+Drawback:- 
+=>If one promise is rejected it wont go fo other
+=>It will display the information of the rejected promise.
+
+promise.allsettled
+=> when you want know the state of each of promise.
+=> It is more useful when you dont have Dependent operation
+=> output will be a promise object
